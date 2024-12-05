@@ -1,0 +1,24 @@
+Task 3
+	In functia recommendations am obtinut mai intai matricea redusa, cu clientii care au contribuit cel mai mult. Dupa aceea, am obtinut matricea V care 
+va contine doar num_features valori singulare. Mi am intializat vectorul de similaritati si am extras vectorul care ofera informatii despre liked theme. 
+Dupa aceea am folosit functia cosine_similarity pentru a calcula similaritatea intre vectorii din V si vectorul liked. Rezulatatele le-am stocat in 
+vectorul de similaritati pe care dupa l am sortat descrescator pentru a afla care sunt cele mai bune similaritati. Avand in vedere ca la indicele 1 se 
+afla 1, adica valoarea pe care o obtin cand calculez cosine similarity intre vectorul liked si el insusi, voi extrage indicii de la 2 si ma voi opri la 
+num_recoms + 1, pentru a obtine exact nr de recomandari cerut.
+
+Task 2
+	In spline_c2, pe baza ecuatiilor date construiesc matricea de coeficienti pentru cele 4*n necunoscute, iar la final calculez valorile lor. In P_spline
+determin in ce interval se incadreaza fiecare punct de interpolare. Apoi folosesc coeficientii spline corespunzatori pentru a evalua polinomul cubic la 
+fiecare punct de interpolare. In final returnez y_interp, un vector care contine valorile spline evaluate in fiecare punct din x_interp.
+	In functia Vandermonde obtin matricea V calculand valorile pe fiecare linie si la final calculez coeficientii, folosind operatorul ’\’ pentru a 
+efectua rezolvarea sistemului liniar, iar in P_vandermonde doar inmultesc matricea de valori cu matricea de coeficienti pentru a afla y_interp.
+
+Task 1
+
+	In 'plain loop' sunt reprezentate 2s dintr-o melodie, iar in 'plain sound' sunt reprezentate niste sunete izolate. In 'low pass sound', dupa ce s-a 
+aplicat filtrul de low_pass, au fost atenuate frecventele inalte si au ramas sunetele cu o frecventa mica. In 'reverb sound' putem observa cum spectograma 
+s-a umplut de 'zgomot', pentru ca s-a aplicat filtrul reverb. Comparativ cu 'plain sound', 'reverb sound' arata mai densa si cu o distributie mai larga 
+a frecventelor datorita efectului de ecou.
+	In 'tech' sunt reprezentate 10 sec din melodia tech.wav. In 'low pass tech' frecventele inalte sunt diminuate, pentru ca s-a aplicat low pass pe 
+tech.wav. In 'reverb tech' se afla spectograma melodiei tech.wav cu reverb. In 'low pass + reverb tech' putem observa reflexii sonore ale freceventelor joase. 
+In 'reverb + low pass tech' s-a aplicat low pass dupa reverb, ceea ce a permis mai multe frecvente inalte in spectrograma.
